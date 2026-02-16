@@ -1,0 +1,10 @@
+{
+  "name": "bank-frontend",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "npx serve ."
+  },
+  "dependencies": {
+    "serve": "^14.2.5"
+  }
+}
