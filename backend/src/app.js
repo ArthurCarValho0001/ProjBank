@@ -1,11 +1,16 @@
-const express = require('express')
-const cors = require('cors')
-const routes = require('./routes')
+const express = require("express");
+const morgan = require("morgan");
 
-const app = express()
+const routes = require("./routes");
+const errorHandler = require("./middlewares/errorHandler");
 
-app.use(cors())
-app.use(express.json())
-app.use(routes)
+const app = express();
 
-app.listen(3000)
+app.use(express.json());
+app.use(morgan("dev"));
+
+app.use(routes);
+
+app.use(errorHandler);
+
+module.exports = app;
