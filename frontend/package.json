@@ -5,6 +5,7 @@
     "dev": "npx serve ."
   },
   "dependencies": {
+    "bootstrap": "^5.3.8",
     "serve": "^14.2.5"
   }
 }
