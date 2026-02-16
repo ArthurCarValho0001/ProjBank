@@ -1,9 +1,12 @@
-const express = require('express')
+const { Router } = require("express");
+const usuariosController = require("../controllers/usuariosController");
 
-const router = express.Router()
+const routes = Router();
 
-router.get('/status', (req, res) => {
-  res.json({ status: 'ok' })
-})
+routes.get("/usuarios", usuariosController.listarUsuarios);
 
-module.exports = router
+routes.get("/status", (req, res) => {
+  return res.json({ status: "ok" });
+});
+
+module.exports = routes;
